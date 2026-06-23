@@ -1,0 +1,60 @@
+import type { Teacher } from "@/lib/types/teacher"
+import { DEFAULT_TEACHER_SCHEDULE } from "@/lib/types/schedule"
+
+const now = "2026-06-22T00:00:00.000Z"
+
+export const teachers: Teacher[] = [
+  {
+    id: "teacher-hamza",
+    slug: "hafiz-muhammad-hamza",
+    name: "Hafiz Muhammad Hamza",
+    title: "Senior Quran Teacher",
+    qualifications: ["Hafiz"],
+    specialties: ["Hifz", "Nazra", "Qaida", "Tajweed", "Duas & Sunnah"],
+    enabled: true,
+    featured: true,
+    photoUrl: null,
+    schedule: { ...DEFAULT_TEACHER_SCHEDULE },
+    applicationStatus: "active",
+    sortOrder: 1,
+    createdAt: now,
+    updatedAt: now,
+  },
+  {
+    id: "teacher-faheem",
+    slug: "hafiz-muhammad-faheem",
+    name: "Hafiz Muhammad Faheem",
+    title: "Senior Islamic Studies Teacher",
+    qualifications: ["Hafiz"],
+    specialties: ["Nazra", "Qaida", "Duas & Sunnah", "Basic Fiqh"],
+    enabled: true,
+    featured: true,
+    photoUrl: null,
+    schedule: { ...DEFAULT_TEACHER_SCHEDULE },
+    applicationStatus: "active",
+    sortOrder: 2,
+    createdAt: now,
+    updatedAt: now,
+  },
+  {
+    id: "teacher-muzammil",
+    slug: "mufti-hafiz-maulana-muhammad-muzammil",
+    name: "Mufti Hafiz Maulana Muhammad Muzammil",
+    title: "Senior Scholar",
+    qualifications: ["Aalim", "Hafiz", "Mufti"],
+    specialties: [
+      "Advanced Islamic Studies",
+      "Fiqh",
+      "Quran",
+      "Tajweed",
+    ],
+    enabled: true,
+    featured: true,
+    photoUrl: null,
+    schedule: { ...DEFAULT_TEACHER_SCHEDULE },
+    applicationStatus: "active",
+    sortOrder: 3,
+    createdAt: now,
+    updatedAt: now,
+  },
+]

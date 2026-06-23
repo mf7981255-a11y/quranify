@@ -1,0 +1,57 @@
+import type { PaymentMethod } from "@/lib/types/payment-method"
+
+const now = "2026-06-22T00:00:00.000Z"
+
+export const paymentMethods: PaymentMethod[] = [
+  {
+    id: "payment-jazzcash",
+    slug: "jazzcash",
+    name: "JazzCash",
+    type: "mobile-wallet",
+    accountTitle: "Quranify Academy",
+    accountNumber: "0300-0000000",
+    instructions: "Send payment to the JazzCash number above and share the transaction ID via WhatsApp.",
+    enabled: true,
+    sortOrder: 1,
+    createdAt: now,
+    updatedAt: now,
+  },
+  {
+    id: "payment-easypaisa",
+    slug: "easypaisa",
+    name: "Easypaisa",
+    type: "mobile-wallet",
+    accountTitle: "Quranify Academy",
+    accountNumber: "0300-0000000",
+    instructions: "Send payment to the Easypaisa number above and share the transaction ID via WhatsApp.",
+    enabled: true,
+    sortOrder: 2,
+    createdAt: now,
+    updatedAt: now,
+  },
+  {
+    id: "payment-meezan",
+    slug: "meezan-bank",
+    name: "Meezan Bank",
+    type: "bank-transfer",
+    accountTitle: "Quranify Academy",
+    accountNumber: "0000-0000000-0000",
+    iban: "PK00MEZN0000000000000000",
+    instructions: "Transfer to the account above and email or WhatsApp your payment receipt.",
+    enabled: true,
+    sortOrder: 3,
+    createdAt: now,
+    updatedAt: now,
+  },
+  {
+    id: "payment-bank-placeholder",
+    slug: "future-bank",
+    name: "Additional Bank Account",
+    type: "bank-transfer",
+    instructions: "Bank details will be added by admin.",
+    enabled: false,
+    sortOrder: 4,
+    createdAt: now,
+    updatedAt: now,
+  },
+]
