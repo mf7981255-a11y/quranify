@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   title: "Quranify — Learn Quran Online with Expert Teachers",
   description:
     "Master Quran recitation, Tajweed, and memorization with certified teachers. Flexible online classes for all ages. Start your free trial today.",
+  icons: {
+    icon: "/quranify-favicon.svg",
+    apple: "/quranify-favicon.svg",
+  },
 };
 
 export default function RootLayout({

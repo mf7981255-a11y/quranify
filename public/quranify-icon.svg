@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldIconGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#F0CA68" />
+    </linearGradient>
+    <linearGradient id="navyIconGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0D1B2A" />
+      <stop offset="100%" stop-color="#102A3A" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="white" />
+  <path d="M132 278C132 206 178 156 236 156H276C334 156 380 206 380 278V316C380 334 364 348 346 348H166C148 348 132 334 132 316V278Z" fill="url(#navyIconGrad)" />
+  <path d="M156 278C156 228 192 192 236 192H276C320 192 356 228 356 278V312C356 322 348 330 338 330H174C164 330 156 322 156 312V278Z" fill="white" opacity="0.9" />
+  <path d="M226 219C226 205 238 194 252 194H260C274 194 286 205 286 219V257C286 265 280 272 272 275L256 285C253 286 249 286 246 285L230 275C222 272 216 265 216 257V219H226Z" fill="url(#goldIconGrad)" />
+  <path d="M236 316C238 316 240 314 240 312V260C240 258 238 256 236 256H222C220 256 218 258 218 260V312C218 314 220 316 222 316H236Z" fill="#0D1B2A" />
+  <path d="M218 260L229 250C230 249 232 248 234 249L240 253C241 254 242 256 241 258L232 267C231 269 229 270 227 269L218 260Z" fill="#0D1B2A" />
+  <path d="M242 248C242 244 245 241 249 241C253 241 256 244 256 248C256 252 253 255 249 255C245 255 242 252 242 248Z" fill="url(#goldIconGrad)" />
+  <path d="M276 148C276 132 286 120 302 120C318 120 328 132 328 148C328 164 318 176 302 176C286 176 276 164 276 148Z" fill="#F5E2B4" opacity="0.95" />
+</svg>

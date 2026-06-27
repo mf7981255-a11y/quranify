@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#F0CA68" />
+    </linearGradient>
+    <linearGradient id="navyGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0D1B2A" />
+      <stop offset="100%" stop-color="#102A3A" />
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#0D1B2A" flood-opacity="0.18" />
+    </filter>
+  </defs>
+  <rect width="1200" height="600" fill="white" rx="40" />
+  <g filter="url(#softShadow)">
+    <path d="M238 310C238 210 330 120 450 120H750C870 120 962 210 962 310V392C962 429 932 458 894 458H306C268 458 238 429 238 392V310Z" fill="url(#navyGrad)" />
+    <path d="M300 310C300 246 348 200 412 200H788C852 200 900 246 900 310V420C900 432 890 442 878 442H322C310 442 300 432 300 420V310Z" fill="white" opacity="0.95" />
+    <path d="M490 244C490 218 506 200 532 200H668C694 200 710 218 710 244V320C710 334 700 346 686 350L610 372C604 374 598 374 592 372L516 350C502 346 492 334 492 320V244H490Z" fill="url(#goldGrad)" />
+    <path d="M535 478C538 478 540 476 540 473V360C540 356 538 354 535 354H488C484 354 482 356 482 360V473C482 476 484 478 488 478H535Z" fill="#0D1B2A" />
+    <path d="M482 360L505 333C507 330 511 329 514 331L540 350C543 352 545 356 543 360L520 387C517 390 513 391 510 389L482 360Z" fill="#0D1B2A" />
+    <path d="M518 330C518 322 524 316 532 316C540 316 546 322 546 330C546 338 540 344 532 344C524 344 518 338 518 330Z" fill="url(#goldGrad)" />
+    <path d="M738 210C743 190 748 171 748 150C748 126 737 107 718 96C700 107 688 126 688 150C688 164 693 178 700 189C706 197 716 204 727 205C730 205 734 204 738 210Z" fill="#F5E2B4" />
+    <path d="M770 155C770 183 748 205 720 205C692 205 670 183 670 155C670 127 692 105 720 105C748 105 770 127 770 155Z" fill="white" opacity="0.92" />
+    <path d="M730 125L733 133L742 133L735 138L738 147L730 142L722 147L725 138L718 133L727 133L730 125Z" fill="#D4AF37" />
+  </g>
+  <g transform="translate(100 100)">
+    <path d="M80 298C80 210 149 140 238 140H118C55 140 8 187 8 250C8 314 55 362 118 362H238C149 362 80 292 80 298Z" fill="#0F766E" opacity="0.08" />
+  </g>
+  <text x="360" y="350" font-family="Cormorant Garamond, serif" font-size="96" font-weight="700" fill="#0D1B2A">Quran</text>
+  <text x="760" y="350" font-family="Cormorant Garamond, serif" font-size="96" font-weight="700" fill="url(#goldGrad)">ify</text>
+  <text x="360" y="410" font-family="Inter, sans-serif" font-size="24" fill="#0D1B2A" letter-spacing="0.2em">LEARN • UNDERSTAND • LIVE</text>
+</svg>

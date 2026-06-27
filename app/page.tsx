@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/home/navbar"
+import { WelcomeSelection } from "@/components/home/welcome-selection"
 import { Hero } from "@/components/home/hero"
 import { WhyQuranify } from "@/components/home/why-quranify"
 import { Courses } from "@/components/home/courses"
@@ -15,6 +16,7 @@ export default function HomePage() {
     <>
       <Navbar />
       <main>
+        <WelcomeSelection />
         <Hero />
         <WhyQuranify />
         <Courses />

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldFav" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#F0CA68" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#0D1B2A" />
+  <path d="M136 286C136 226 178 186 238 186H274C334 186 376 226 376 286V316C376 332 364 342 348 342H154C138 342 126 332 126 316V286Z" fill="white" />
+  <path d="M206 232C206 220 216 210 228 210H246C258 210 268 220 268 232V262C268 268 264 272 258 274L246 281C244 282 241 282 239 281L227 274C221 272 217 268 217 262V232H206Z" fill="url(#goldFav)" />
+  <path d="M322 172C322 160 330 152 342 152C354 152 362 160 362 172C362 184 354 192 342 192C330 192 322 184 322 172Z" fill="#F5E2B4" opacity="0.95" />
+</svg>
