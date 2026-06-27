@@ -1,74 +1,110 @@
-import { Star } from "lucide-react"
+import Link from "next/link"
+import { ArrowRight, BadgeCheck, BookOpen, Clock3, Sparkles, UserRound } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { SectionHeader } from "@/components/home/section-header"
 
 const teachers = [
   {
-    initials: "AK",
-    name: "Ustadha Amina Khan",
-    specialty: "Tajweed & Recitation",
-    experience: "12 years",
-    rating: 4.9,
-    students: 340,
+    initials: "QF",
+    name: "Qari Muhammad Faheem",
+    designation: "Senior Quran Teacher",
+    specializations: ["Tajweed", "Recitation", "Nazra"],
+    experience: "15+ Years",
+    languages: ["English", "Urdu"],
+    availability: "Available Now",
   },
   {
-    initials: "MR",
-    name: "Ustadh Muhammad Rahman",
-    specialty: "Hifz Program",
-    experience: "15 years",
-    rating: 5.0,
-    students: 520,
+    initials: "QH",
+    name: "Qari Muhammad Hamza",
+    designation: "Senior Quran Teacher",
+    specializations: ["Hifz", "Qiraat", "Memorization"],
+    experience: "12+ Years",
+    languages: ["English", "Arabic"],
+    availability: "Limited Slots",
   },
   {
-    initials: "FS",
-    name: "Ustadha Fatima Siddiq",
-    specialty: "Children's Quran",
-    experience: "8 years",
-    rating: 4.9,
-    students: 280,
-  },
-  {
-    initials: "YA",
-    name: "Ustadh Yusuf Ali",
-    specialty: "Quranic Arabic",
-    experience: "10 years",
-    rating: 4.8,
-    students: 195,
+    initials: "MM",
+    name: "Molana Muhammad Muzammil",
+    designation: "Senior Islamic Scholar",
+    specializations: ["Islamic Studies", "Tafsir", "Seerah"],
+    experience: "18+ Years",
+    languages: ["Urdu", "English"],
+    availability: "Book Early",
   },
 ]
 
 export function Teachers() {
   return (
-    <section id="teachers" className="bg-green-light/50 py-16 sm:py-20 lg:py-24">
+    <section id="teachers" className="bg-[linear-gradient(135deg,#ffffff_0%,#fcfbf7_60%,#ffffff_100%)] py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="Our Teachers"
-          title="Learn from certified scholars"
-          description="Our teachers are hand-selected for their knowledge, teaching ability, and dedication to nurturing every student's relationship with the Quran."
+          title="Meet Our Expert Instructors"
+          description="Learn from experienced Quran teachers dedicated to helping students worldwide."
         />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {teachers.map((teacher) => (
-            <div
+            <article
               key={teacher.name}
-              className="rounded-2xl border border-border/60 bg-background p-6 text-center transition-shadow hover:shadow-lg hover:shadow-primary/5"
+              className="group flex h-full flex-col rounded-[1.6rem] border border-slate-900/10 bg-white/80 p-6 shadow-[0_24px_70px_-35px_rgba(15,23,42,0.28)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_30px_80px_-30px_rgba(15,23,42,0.32)]"
             >
-              <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-primary text-xl font-semibold text-primary-foreground">
-                {teacher.initials}
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex size-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/15 to-gold/15 text-lg font-semibold text-primary shadow-sm transition-all duration-300 group-hover:scale-105">
+                  {teacher.initials}
+                </div>
+                <Badge className="border-gold/30 bg-gold/10 text-gold-foreground">
+                  {teacher.experience}
+                </Badge>
               </div>
-              <h3 className="mt-4 font-heading text-base font-semibold text-foreground">
-                {teacher.name}
-              </h3>
-              <p className="mt-1 text-sm text-primary">{teacher.specialty}</p>
-              <div className="mt-3 flex items-center justify-center gap-1">
-                <Star className="size-3.5 fill-gold text-gold" />
-                <span className="text-sm font-medium">{teacher.rating}</span>
+
+              <div className="mt-6 flex-1">
+                <h3 className="font-heading text-xl font-semibold text-slate-950">
+                  {teacher.name}
+                </h3>
+                <p className="mt-2 text-sm font-medium text-primary">
+                  {teacher.designation}
+                </p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {teacher.specializations.map((item) => (
+                    <Badge key={item} variant="secondary" className="rounded-full bg-slate-50 px-3 py-1 text-slate-600">
+                      {item}
+                    </Badge>
+                  ))}
+                </div>
+
+                <div className="mt-5 space-y-3 text-sm text-slate-600">
+                  <div className="flex items-center gap-2">
+                    <BookOpen className="size-4 text-primary" />
+                    <span>Languages: {teacher.languages.join(" • ")}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock3 className="size-4 text-primary" />
+                    <span>{teacher.availability}</span>
+                  </div>
+                </div>
               </div>
-              <div className="mt-4 flex flex-wrap justify-center gap-2">
-                <Badge variant="secondary">{teacher.experience}</Badge>
-                <Badge variant="outline">{teacher.students}+ students</Badge>
+
+              <div className="mt-6 flex items-center justify-between rounded-2xl border border-slate-900/10 bg-slate-50/80 px-3 py-2.5">
+                <div className="flex items-center gap-2 text-sm font-medium text-slate-700">
+                  <BadgeCheck className="size-4 text-gold" />
+                  Certified Mentor
+                </div>
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  className="h-9 rounded-full px-3 text-sm font-semibold text-slate-700 hover:bg-white"
+                  asChild
+                >
+                  <Link href="#contact">
+                    View Profile
+                    <ArrowRight className="ml-1.5 size-4" />
+                  </Link>
+                </Button>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
