@@ -1,62 +1,53 @@
-import { Quote, Star } from "lucide-react"
+import { Sparkles } from "lucide-react"
 import { SectionHeader } from "@/components/home/section-header"
 
-const testimonials = [
+const placeholders = [
   {
-    name: "Sarah Ahmed",
-    role: "Parent · London, UK",
-    quote:
-      "My 8-year-old daughter went from struggling with letters to reciting Surah Al-Fatiha beautifully in just three months. The teachers are patient, kind, and truly gifted.",
-    rating: 5,
+    title: "Verified Reviews Coming Soon",
+    description: "Authentic student and parent feedback will appear here once classes begin.",
   },
   {
-    name: "Omar Hassan",
-    role: "Adult Learner · Toronto, CA",
-    quote:
-      "As a busy professional, I needed flexibility. Quranify matched me with an excellent Tajweed teacher who works around my schedule. My recitation has improved dramatically.",
-    rating: 5,
+    title: "Real Ratings Pending",
+    description: "This space is being prepared for verified ratings and testimonials from our community.",
   },
   {
-    name: "Aisha Malik",
-    role: "Hifz Student · Dubai, UAE",
-    quote:
-      "The structured Hifz program with daily revision tracking kept me accountable. I've memorized 5 juz so far and feel confident in my retention thanks to my teacher's method.",
-    rating: 5,
+    title: "Database Ready",
+    description: "The layout is structured so reviewed content can be loaded dynamically later.",
   },
 ]
 
 export function Testimonials() {
   return (
-    <section className="bg-green-light/50 py-16 sm:py-20 lg:py-24">
+    <section id="testimonials" className="bg-[linear-gradient(135deg,#ffffff_0%,#fcfbf7_60%,#ffffff_100%)] py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="Testimonials"
-          title="Stories from our community"
-          description="Hear from students and parents who have transformed their Quran journey with Quranify."
+          title="Student Reviews Coming Soon"
+          description="We are preparing this section to showcase verified reviews from our students and parents. Once classes begin, authentic testimonials and ratings will appear here."
         />
 
-        <div className="grid gap-6 md:grid-cols-3">
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.name}
-              className="flex flex-col rounded-2xl border border-border/60 bg-background p-6"
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {placeholders.map((item) => (
+            <article
+              key={item.title}
+              className="flex h-full flex-col rounded-[1.5rem] border border-slate-900/10 bg-white/80 p-6 shadow-[0_24px_70px_-35px_rgba(15,23,42,0.28)] backdrop-blur-xl"
             >
-              <Quote className="size-8 text-gold/60" />
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
-                &ldquo;{testimonial.quote}&rdquo;
-              </p>
-              <div className="mt-6 flex items-center gap-1">
-                {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="size-3.5 fill-gold text-gold" />
-                ))}
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex size-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/15 to-gold/15 text-primary shadow-sm">
+                  <Sparkles className="size-5" />
+                </div>
+                <span className="rounded-full border border-primary/15 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                  Coming Soon
+                </span>
               </div>
-              <div className="mt-4 border-t border-border/60 pt-4">
-                <p className="text-sm font-medium text-foreground">
-                  {testimonial.name}
+
+              <div className="mt-6 flex-1">
+                <p className="font-heading text-lg font-semibold text-slate-950">
+                  {item.title}
                 </p>
-                <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                <p className="mt-2 text-sm leading-7 text-slate-600">{item.description}</p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

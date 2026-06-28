@@ -27,7 +27,7 @@ const courses = [
   },
   {
     icon: Sparkles,
-    title: "Tajweed Course",
+    title: "Tajweed",
     description: "Master recitation rules with clarity, rhythm, and authentic articulation.",
     duration: "Flexible",
   },
@@ -45,7 +45,7 @@ const courses = [
   },
   {
     icon: SunMedium,
-    title: "Duas & Sunnah for Kids",
+    title: "Duas & Sunnah",
     description: "Help children learn essential duas, sunnah, and daily Islamic habits with joy.",
     duration: "Flexible",
   },
@@ -71,9 +71,14 @@ export function Courses() {
                 <div className="flex size-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/15 to-gold/15 text-primary shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:from-primary/20 group-hover:to-gold/20">
                   <course.icon className="size-5" />
                 </div>
-                <Badge className="border-gold/30 bg-gold/10 text-gold-foreground">
-                  One-to-One & Group Classes
-                </Badge>
+                <div className="flex flex-wrap justify-end gap-2">
+                  <Badge className="border-gold/30 bg-gold/10 text-gold-foreground">
+                    One-to-One Classes
+                  </Badge>
+                  <Badge variant="secondary" className="bg-slate-100 text-slate-700">
+                    Group Classes
+                  </Badge>
+                </div>
               </div>
 
               <div className="mt-6 flex-1">
@@ -92,7 +97,7 @@ export function Courses() {
                 </div>
 
                 <div className="rounded-2xl border border-slate-900/10 bg-white px-3 py-2.5 text-sm text-slate-600">
-                  Flexible Fee Structure
+                  Fee decided after consultation
                 </div>
 
                 <Button

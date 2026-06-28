@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, BadgeCheck, BookOpen, Clock3, Sparkles, UserRound } from "lucide-react"
+import { ArrowRight, BadgeCheck } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { SectionHeader } from "@/components/home/section-header"
@@ -8,29 +8,20 @@ const teachers = [
   {
     initials: "QF",
     name: "Qari Muhammad Faheem",
-    designation: "Senior Quran Teacher",
-    specializations: ["Tajweed", "Recitation", "Nazra"],
-    experience: "15+ Years",
-    languages: ["English", "Urdu"],
-    availability: "Available Now",
+    designation: "Quran Teacher",
+    experience: "3 Years",
   },
   {
     initials: "QH",
     name: "Qari Muhammad Hamza",
-    designation: "Senior Quran Teacher",
-    specializations: ["Hifz", "Qiraat", "Memorization"],
-    experience: "12+ Years",
-    languages: ["English", "Arabic"],
-    availability: "Limited Slots",
+    designation: "Quran Teacher",
+    experience: "2 Years",
   },
   {
     initials: "MM",
     name: "Molana Muhammad Muzammil",
-    designation: "Senior Islamic Scholar",
-    specializations: ["Islamic Studies", "Tafsir", "Seerah"],
-    experience: "18+ Years",
-    languages: ["Urdu", "English"],
-    availability: "Book Early",
+    designation: "Islamic Scholar",
+    experience: "4 Years",
   },
 ]
 
@@ -41,7 +32,7 @@ export function Teachers() {
         <SectionHeader
           badge="Our Teachers"
           title="Meet Our Expert Instructors"
-          description="Learn from experienced Quran teachers dedicated to helping students worldwide."
+          description="Learn from dedicated Quran teachers committed to supporting students with clarity and care."
         />
 
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -66,31 +57,12 @@ export function Teachers() {
                 <p className="mt-2 text-sm font-medium text-primary">
                   {teacher.designation}
                 </p>
-
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {teacher.specializations.map((item) => (
-                    <Badge key={item} variant="secondary" className="rounded-full bg-slate-50 px-3 py-1 text-slate-600">
-                      {item}
-                    </Badge>
-                  ))}
-                </div>
-
-                <div className="mt-5 space-y-3 text-sm text-slate-600">
-                  <div className="flex items-center gap-2">
-                    <BookOpen className="size-4 text-primary" />
-                    <span>Languages: {teacher.languages.join(" • ")}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock3 className="size-4 text-primary" />
-                    <span>{teacher.availability}</span>
-                  </div>
-                </div>
               </div>
 
               <div className="mt-6 flex items-center justify-between rounded-2xl border border-slate-900/10 bg-slate-50/80 px-3 py-2.5">
                 <div className="flex items-center gap-2 text-sm font-medium text-slate-700">
                   <BadgeCheck className="size-4 text-gold" />
-                  Certified Mentor
+                  Profile Ready
                 </div>
                 <Button
                   size="sm"

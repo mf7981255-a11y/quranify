@@ -13,6 +13,9 @@ export interface Teacher {
   title: string
   qualifications: string[]
   specialties: string[]
+  languages?: string[]
+  status?: string
+  experience?: string
   bio?: string
   photoUrl: string | null
   enabled: boolean
